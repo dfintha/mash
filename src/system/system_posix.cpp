@@ -21,7 +21,7 @@ namespace mash_s {
 				specific = "\x1B[32m";
 				break;
 			case termcolor::yellow:
-				specific = specific = "\x1B[33m";
+				specific = "\x1B[33m";
 				break;
 			case termcolor::normal:
 			default:

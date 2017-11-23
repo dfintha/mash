@@ -3,6 +3,7 @@
 #include "expressions/container.hpp"
 #include "expressions/basic.hpp"
 #include <cfloat>
+#include <cmath>
 #include <iostream>
 
 inline std::ostream& operator<<(std::ostream& stream, const mash_e::container& expr) {
