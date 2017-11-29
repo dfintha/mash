@@ -107,7 +107,8 @@ EOF to the standard input (^D).
 * Migrate to C++17.
 * Add simplification for multiplication by -1.
 * Add simplification for negatives with constants.
-* Add derivn command which derives the given expression N times.
+* Add derivn command, which derives the given expression N times.
+* Add plot command, which displays the given expression graphically.
 
 ## License
 
