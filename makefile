@@ -16,7 +16,7 @@ HEADERS=src/utilities.hpp
 
 CXX=clang++
 CXXFLAGS=-std=c++14	-I$(PWD)/src					\
-         -Wall -Wextra -Weffc++ -Werror -pedantic	\
+         -Wall -Wextra -Werror -pedantic	\
          -O2 -ffast-math -fomit-frame-pointer
 
 BLD=`tput bold`
