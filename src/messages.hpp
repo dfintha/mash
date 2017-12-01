@@ -6,7 +6,7 @@ static constexpr const char nl = '\n';
 
 static constexpr const char info_version[] =
 	"mash " MASH_STATE 
-	" [" MASH_OS "-" MASH_ARCH "] " 
+	" [" MASH_OS "-" MASH_ARCH "-" MASH_COMPILER "] " 
 	MASH_VERSION 
 	" (" MASH_BUILD ")";
 

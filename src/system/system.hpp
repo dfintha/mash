@@ -13,6 +13,16 @@
 #define MASH_ARCH "32"
 #endif
 
+#if defined(__clang__)
+#define MASH_COMPILER "clang"
+#elif defined(__GNUC__)
+#define MASH_COMPILER "gcc"
+#elif defined(_MSC_VER)
+#define MASH_COMPILER "msvc"
+#else
+#define MASH_COMPILER "unknown"
+#endif
+
 #if defined(_WIN32) || defined(_WIN64)
 #define MASH_SYSTEM_WINDOWS
 #define MASH_OS "windows"
