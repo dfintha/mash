@@ -1,22 +1,23 @@
 BINARY=bin/mash
-OBJECTS=obj/db/database.o 							\
-		obj/expressions/basic.o 					\
-		obj/expressions/binary.o 					\
-		obj/expressions/container.o 				\
-		obj/expressions/unary.o 					\
-		obj/parser/parser.o 						\
-		obj/parser/tokens.o 						\
-		obj/system/system_custom.o 					\
-		obj/system/system_posix.o 					\
-		obj/system/system_win.o 					\
-		obj/commands.o 								\
-		obj/program.o
+OBJECTS=obj/db/database.o                           \
+        obj/expressions/basic.o                     \
+        obj/expressions/binary.o                    \
+        obj/expressions/container.o                 \
+        obj/expressions/unary.o                     \
+        obj/parser/parser.o                         \
+        obj/parser/tokens.o                         \
+        obj/system/system_custom.o                  \
+        obj/system/system_posix.o                   \
+        obj/system/system_win.o                     \
+        obj/commands.o                              \
+        obj/program.o
 
-HEADERS=src/utilities.hpp
+HEADERS=src/utilities.hpp                           \
+        src/messages.hpp
 
 CXX=clang++
-CXXFLAGS=-std=c++14	-I$(PWD)/src					\
-         -Wall -Wextra -Werror -pedantic	\
+CXXFLAGS=-std=c++14	-I$(PWD)/src                    \
+         -Wall -Wextra -Werror -pedantic            \
          -O2 -ffast-math -fomit-frame-pointer
 
 BLD=`tput bold`

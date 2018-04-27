@@ -52,7 +52,7 @@ static constexpr const char msg_extended_help[] =
 	"  riemann [a] [b] [name/expression]  integrates a function from a to b\n"
 	"  unlink [name]                      deletes a stored function\n"
 	"  print [name/expression/string]     prints a function or a string\n"
-	"  run [file]                         rnus an external file\n"
+	"  run [file]                         runs an external file\n"
 	"  help                               shows this help message\n"
 	"  builtins                           shows a list of builtin functions\n"
 	"  exit, quit                         terminates the program\n"
