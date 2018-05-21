@@ -15,6 +15,7 @@ bool riemann(const std::string& params, bool noisy);
 bool unlink(const std::string& params);
 bool print(std::string params);
 bool run(const std::string& params, bool noisy);
+bool plot(const std::string& params);
 
 inline bool help() {
 	mash_s::color(mash_s::termcolor::yellow);

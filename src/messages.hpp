@@ -40,6 +40,9 @@ static constexpr const char err_invalid_double_parens[] =
 static constexpr const char err_file_not_found[] =
 	"The specified file could not be found or opened.";
 
+static constexpr const char err_window_open[] =
+	"An SDL window could not be opened.";
+
 static constexpr const char msg_intro_help[] =
 	"Use the 'help' command for help or the 'exit' command to quit.";
 
@@ -53,6 +56,7 @@ static constexpr const char msg_extended_help[] =
 	"  unlink [name]                      deletes a stored function\n"
 	"  print [name/expression/string]     prints a function or a string\n"
 	"  run [file]                         runs an external file\n"
+	"  plot [expression/name]             displays the plot of a function\n"
 	"  help                               shows this help message\n"
 	"  builtins                           shows a list of builtin functions\n"
 	"  exit, quit                         terminates the program\n"

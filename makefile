@@ -10,6 +10,7 @@ OBJECTS=obj/db/database.o                           \
         obj/system/system_posix.o                   \
         obj/system/system_win.o                     \
         obj/commands.o                              \
+        obj/plot.o                                  \
         obj/program.o
 
 HEADERS=src/utilities.hpp                           \
@@ -18,7 +19,9 @@ HEADERS=src/utilities.hpp                           \
 CXX=clang++
 CXXFLAGS=-std=c++14	-I$(PWD)/src                    \
          -Wall -Wextra -Werror -pedantic            \
-         -O2 -ffast-math -fomit-frame-pointer
+         -O2 -ffast-math -fomit-frame-pointer       \
+		 `sdl-config --cflags`
+LDFLAGS=`sdl-config --libs` -lSDL_gfx -lGL -lGLU
 
 BLD=`tput bold`
 RED=`tput setaf 1`
@@ -39,7 +42,7 @@ loc:
 $(BINARY): $(OBJECTS)
 	@mkdir -p bin
 	@printf "%s[Linking]%s $@\n" "$(BLD)$(TEL)" $(NRM)
-	@$(CXX) $(OBJECTS) -o $@
+	@$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
 	@printf "%s[ Strip ]%s $@\n" "$(BLD)$(TEL)" $(NRM)
 	@strip $@
 	@printf "%s[Success] Build Succeeded!%s\n" "$(BLD)$(GRN)" $(NRM)

@@ -4,6 +4,7 @@
 #include "system/system.hpp"
 #include "commands.hpp"
 #include "messages.hpp"
+#include "plot.hpp"
 #include "utilities.hpp"
 #include <algorithm>
 #include <cctype>
@@ -322,3 +323,25 @@ bool run(const std::string& params, bool) {
 
 	return true;
 }
+
+bool plot(const std::string& params) {
+	std::string exprstr = params;
+    strtrim(exprstr);
+
+	mash_e::container func;
+	if (exprstr[0] == '(') {
+		if (!valid_expr(exprstr))
+			return false;
+		func = mash_p::parse_expression(exprstr);
+        return plot_function(func);
+	} else {
+		mash_e::container *where = mash_d::database::instance().lookup(exprstr);
+		if (where != nullptr) {
+            return plot_function(*where);
+		} else {
+			cache_msg(err_name_not_found, nullptr);
+			return false;
+		}
+	}
+}
+

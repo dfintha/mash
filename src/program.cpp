@@ -73,6 +73,9 @@ bool interpret(std::string command, bool noisy) {
 	if (name == "run")
 		return run(rest, noisy);
 
+    if (name == "plot")
+        return plot(rest);
+
 	if (name == "help")
 		return help();
 

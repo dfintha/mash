@@ -78,6 +78,11 @@ given, `print` will output an empty line.
 Interprets the contents of a given file line-by-line, as if the lines were
 entered during the session.
 
+#### plot
+```plot [name/expression]```
+
+Shows a plot of the given function in an SDL window.
+
 #### help
 ```help```
 
