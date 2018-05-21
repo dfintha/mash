@@ -5,7 +5,7 @@
 #define MASH_MINOR 1
 #define MASH_VERSION "v0.1"
 #define MASH_STATE "alpha"
-#define MASH_BUILD "2017-11-18"
+#define MASH_BUILD "2018-05-21"
 
 #if defined(_WIN64) || defined (__x86_64__)
 #define MASH_ARCH "64"
