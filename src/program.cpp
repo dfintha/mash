@@ -72,9 +72,10 @@ bool interpret(std::string command, bool noisy) {
 
     if (name == "run")
         return run(rest, noisy);
-
+#if defined(MASH_PLOT_FEATURE)
     if (name == "plot")
         return plot(rest);
+#endif
 
     if (name == "help")
         return help();

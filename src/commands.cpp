@@ -324,6 +324,7 @@ bool run(const std::string& params, bool) {
 	return true;
 }
 
+#if defined(MASH_PLOT_FEAUTRE)
 bool plot(const std::string& params) {
 	std::string exprstr = params;
     strtrim(exprstr);
@@ -344,4 +345,5 @@ bool plot(const std::string& params) {
 		}
 	}
 }
+#endif
 

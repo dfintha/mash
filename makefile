@@ -19,9 +19,8 @@ HEADERS=src/utilities.hpp                           \
 CXX=clang++
 CXXFLAGS=-std=c++14	-I$(PWD)/src                    \
          -Wall -Wextra -Werror -pedantic            \
-         -O2 -ffast-math -fomit-frame-pointer       \
-		 `sdl-config --cflags`
-LDFLAGS=`sdl-config --libs` -lSDL_gfx -lGL -lGLU
+         -O2 -ffast-math -fomit-frame-pointer
+LDFLAGS=
 
 BLD=`tput bold`
 RED=`tput setaf 1`
@@ -34,6 +33,10 @@ NRM=`tput sgr0`
 .PHONY: all clean
 
 all: $(BINARY)
+
+withplot: LDFLAGS += `sdl-config --libs` -lSDL_gfx -GL -lGLU
+withplot: CXXFLAGS += `sdl-config --cflags`
+withplot: $(BINARY)
 
 loc:
 	@printf "%s[ Lines ]%s " "$(BLD)$(YLW)" $(NRM)

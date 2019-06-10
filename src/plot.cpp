@@ -1,3 +1,4 @@
+#if defined(MASH_PLOT_FEATURE)
 #include "messages.hpp"
 #include "plot.hpp"
 #include <SDL.h>
@@ -86,4 +87,5 @@ bool plot_function(mash_e::container& f) {
     SDL_Quit();
     return true;
 }
+#endif
 
