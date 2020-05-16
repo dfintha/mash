@@ -35,7 +35,7 @@ NRM=`tput sgr0`
 all: $(BINARY)
 
 withplot: LDFLAGS += `sdl-config --libs` -lSDL_gfx -GL -lGLU
-withplot: CXXFLAGS += `sdl-config --cflags`
+withplot: CXXFLAGS += `sdl-config --cflags` -DMASH_PLOT_FEATURE
 withplot: $(BINARY)
 
 loc:

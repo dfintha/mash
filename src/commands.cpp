@@ -310,7 +310,7 @@ bool run(const std::string& params, bool) {
 		if (line == "") {
 			continue;
         }
-	
+
 		success = interpret(line, false);
 		if (!success) {
 			std::string errmsg;
@@ -324,7 +324,7 @@ bool run(const std::string& params, bool) {
 	return true;
 }
 
-#if defined(MASH_PLOT_FEAUTRE)
+#if defined(MASH_PLOT_FEATURE)
 bool plot(const std::string& params) {
 	std::string exprstr = params;
     strtrim(exprstr);
