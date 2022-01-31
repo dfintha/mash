@@ -1,0 +1,25 @@
+{
+    "name": "mash",
+    "project_type": "executable",
+    "version": "0.1.0",
+    "c_standard": "c99",
+    "cpp_standard": "c++14",
+    "external_libraries": [
+        {
+            "type": "pkg_config",
+            "name": "sdl"
+        },
+        {
+            "type": "manual",
+            "cflags": "",
+            "ldflags": "-lSDL_gfx"
+        },
+        {
+            "type": "manual",
+            "cflags": "",
+            "ldflags": "-GL -lGLU"
+        }
+    ],
+    "custom_cflags": "-DMASH_PLOT_FEATURE",
+    "custom_cxxflags": "-DMASH_PLOT_FEATURE"
+}
