@@ -1,0 +1,16 @@
+print 'mash - Assign Test'
+print
+
+print 'Assigning sin(cos(x)) to F'
+assign F (sin (cos x))
+print 'Assigning F to G'
+assign G F
+print 'Assigning g the derivative of G'
+assign_derived g G
+print 'Unlinking F'
+unlink F
+
+print G 					:: sin(cos(x))
+print g 					:: cos(cos(x)) * -sin(x)
+print 'ref G: sin(cos(x))'
+print 'ref g: cos(cos(x)) * -sin(x)'

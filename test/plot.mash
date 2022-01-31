@@ -1,0 +1,11 @@
+print 'mash - Plot Test'
+print
+
+print 'Assigning sin(5x) * cos(2x) to F'
+assign F (* (sin (* x 5)) (cos (* x 2)))
+print 'Assigning the combination of two frequencies to G'
+assign G (+ (sin (* x 4.40)) (sin (* x 5.54)))
+print 'Plotting the Functions'
+plot F
+plot G
+
